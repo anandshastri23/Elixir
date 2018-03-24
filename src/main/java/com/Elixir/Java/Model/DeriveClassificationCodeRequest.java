@@ -1,24 +1,22 @@
 package com.Elixir.Java.Model;
 
 public class DeriveClassificationCodeRequest {
+    int uid;
+    String issuedDate;
+    int productCd;
+    int taxCd;
+    boolean advisedInd;
+    int classificationCd;
 
-    private final String issuedDate;
-    private final int productCd;
-    private final int taxCd;
-    private final boolean advisedInd;
-
-    public DeriveClassificationCodeRequest(Builder builder) {
-        this.issuedDate = builder.issuedDate;
-        this.productCd = builder.productCd;
-        this.taxCd = builder.taxCd;
-        this.advisedInd = builder.advisedInd;
+    public int getUid() {
+        return uid;
     }
 
     public String getIssuedDate() {
         return issuedDate;
     }
 
-    public int getpProductCd() {
+    public int getProductCd() {
         return productCd;
     }
 
@@ -30,34 +28,31 @@ public class DeriveClassificationCodeRequest {
         return advisedInd;
     }
 
-    public static DeriveClassificationCodeRequest newBuilder(Builder builder) {
-        return new DeriveClassificationCodeRequest(builder);
+    public int getClassificationCd() {
+        return classificationCd;
     }
-}
 
-class Builder {
-    String issuedDate;
-    int productCd;
-    int taxCd;
-    boolean advisedInd;
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
 
-    public Builder issuedDate(String issuedDate) {
+    public void setIssuedDate(String issuedDate) {
         this.issuedDate = issuedDate;
-        return this;
     }
 
-    public Builder productCd(int pProductCd) {
-        this.productCd = pProductCd;
-        return this;
+    public void setProductCd(int productCd) {
+        this.productCd = productCd;
     }
 
-    public Builder taxCd(int taxCd) {
+    public void setTaxCd(int taxCd) {
         this.taxCd = taxCd;
-        return this;
     }
 
-    public Builder advisedInd(boolean advisedInd) {
+    public void setAdvisedInd(boolean advisedInd) {
         this.advisedInd = advisedInd;
-        return this;
+    }
+
+    public void setClassificationCd(int classificationCd) {
+        this.classificationCd = classificationCd;
     }
 }

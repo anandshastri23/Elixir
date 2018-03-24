@@ -15,6 +15,13 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
+dependencyManagement {
+	imports {
+		mavenBom 'org.springframework.boot:spring-boot-starter-parent:1.5.7.RELEASE'
+	}
+}
+
+
 group = 'com.Elixir'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
@@ -26,6 +33,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile group: 'org.jboss.bom.brms', name: 'jboss-brms-bpmsuite-platform-bom', version: '6.4.0.GA-redhat-2', ext: 'pom'
+	compile('org.kie:kie-ci:7.1.0.Final')
+	compile group: 'org.drools', name: 'drools-decisiontables', version: '7.1.0.Final'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

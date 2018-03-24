@@ -1,14 +1,15 @@
 package com.Elixir.Java.Model;
 
 public class DeriveClassificationCodeResponse {
+    int uid;
     String issuedDate;
     int productCd;
     int taxCd;
     boolean advisedInd;
     int classificationCd;
 
-    public int getClassificationCd() {
-        return classificationCd;
+    public int getUid() {
+        return uid;
     }
 
     public String getIssuedDate() {
@@ -25,6 +26,10 @@ public class DeriveClassificationCodeResponse {
 
     public boolean isAdvisedInd() {
         return advisedInd;
+    }
+
+    public int getClassificationCd() {
+        return classificationCd;
     }
 
     public void setIssuedDate(String issuedDate) {
@@ -45,5 +50,9 @@ public class DeriveClassificationCodeResponse {
 
     public void setClassificationCd(int classificationCd) {
         this.classificationCd = classificationCd;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
     }
 }
